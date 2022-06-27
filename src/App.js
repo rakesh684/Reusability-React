@@ -11,7 +11,13 @@ function App() {
             <Menu something="whatever" />
             <hr />
             <Favorite />
-            <Example />
+            <Example name={
+              function(isDaytime){
+                   return (
+                    <h1>{ isDaytime? " Good time":"Bad time"},Rakesh</h1>
+                   )}
+              }
+             />
     </div>
   );
 }

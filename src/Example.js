@@ -1,7 +1,9 @@
 import React from "react";
 
-export default function Example(){
+export default function Example(props){
     return(
-        <h1>Rakesh</h1>
+        <div>
+           {props.name(false)}
+        </div>
     )
 }
