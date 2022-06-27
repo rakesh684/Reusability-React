@@ -4,19 +4,21 @@ class Toggler extends Component {
     state = {
         on: this.props.defaultOnValue
     }
+    static defaultProps = {
+        defaultOnValue: false
+    }
     
     toggle = () => {
-        this.setState(prevState => {
-            return {
-                on: !prevState.on
-            }
-        })
+        this.setState(prevState =>({on: !prevState.on}))
     }
     
     render() {
         return (
             <div>
-                {this.props.render(this.state.on, this.toggle)}
+                {this.props.render(
+                   {on: this.state.on,
+                   toggle:this.toggle}
+                )}
             </div>
         )
     }

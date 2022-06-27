@@ -4,11 +4,19 @@ import './App.css';
 import Menu from "./Menu"
 import Favorite from "./Favorite"
 import Example from "./Example"
+import Toggler from './Toggler';
 
 function App() {
   return (
     <div className="App">
-            <Menu something="whatever" />
+            <Toggler defaultOnValue={false}
+              render={({on,toggle})=>{
+                return(
+                  <Menu on={on} toggle={toggle}/>
+                )
+              }}
+            />
+            
             <hr />
             <Favorite />
             <Example name={
