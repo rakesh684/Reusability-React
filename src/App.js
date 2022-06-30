@@ -5,6 +5,7 @@ import Menu from "./Menu"
 import Favorite from "./Favorite"
 import Example from "./Example"
 import Toggler from './Toggler';
+import Family from './Family'
 
 function App() {
   return (
@@ -26,8 +27,11 @@ function App() {
                    )}
               }
              />
+             <Family />
     </div>
   );
 }
 
 export default App;
+
+
