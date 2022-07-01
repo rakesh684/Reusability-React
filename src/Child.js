@@ -1,7 +1,7 @@
 import React from "react"
 import GrandChild from "./GrandChild"
 
-function Child() {
+export default React.memo(function Child() {
     console.log("[ ]   [ ]   [🧒🏻]   [ ] rendered")
     return (
         <div>
@@ -11,5 +11,4 @@ function Child() {
         </div>
     )
 }
-
-export default Child
+)
