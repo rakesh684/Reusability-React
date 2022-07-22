@@ -4,19 +4,16 @@ import './App.css';
 import Menu from "./Menu"
 import Favorite from "./Favorite"
 import Example from "./Example"
-import Toggler from './Toggler';
+// import Toggler from './Toggler';
 import Family from './Family'
-
+import useToggler from './useToggler';
 function App() {
+  const [on,toggle]=useToggler()
   return (
     <div className="App">
-            <Toggler defaultOnValue={false}
-              render={({on,toggle})=>{
-                return(
+            
                   <Menu on={on} toggle={toggle}/>
-                )
-              }}
-            />
+              
             
             <hr />
             <Favorite />

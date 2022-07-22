@@ -1,7 +1,7 @@
 import React from "react"
 import Parent from "./Parent"
 
-function GrandParent(props) {    
+export default React.memo(function GrandParent(props) {    
     console.log("[👴🏼]   [ ]   [ ]   [ ] rendered")
     return (
         <div>
@@ -10,6 +10,5 @@ function GrandParent(props) {
             <Parent />
         </div>
     )
-}
+})
 
-export default GrandParent
